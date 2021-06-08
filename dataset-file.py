@@ -30,3 +30,12 @@ print(list(db['winners'].find()))
 winners = db['winners'].find()
 freeze(winners, format='csv', filename='data/nobel_winners_ds.csv')
 open('data/nobel_winners_ds.csv').read()
+
+from datetime import datetime
+from dateutil import parser
+
+d = parser.parse("2015-09-15T21:48:50.746Z")
+print(d)
+
+d = datetime.now()
+print(d.isoformat())
