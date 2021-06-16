@@ -18,6 +18,15 @@ time_str = '2012/01/01 12:32:11'
 dt = datetime.strptime(time_str, '%Y/%m/%d %H:%M:%S')
 print(dt)
 
+from datetime import datetime
+from dateutil import parser
+
+d = parser.parse("2015-09-15T21:48:50.746Z")
+print(d)
+
+d = datetime.now()
+print(d.isoformat())
+
 # To convert date fields of a known format into datetimes:
 # dt = datetime.strptime('1/2/2012 12:32:11', '%Y/%m/%d %H:%M:%S')
 # for d in data:
